@@ -16,14 +16,27 @@ spec:
       {{- include "ml-testing-toolkit-cli.jobtemplate" . | nindent 6 }}
 {{- else if not .Values.tests.enabled }}
 apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.Job" . }}
+# kind: Job
+# metadata:
+#   name: {{ template "ml-testing-toolkit-cli.fullname" . }}
+#   {{- if .Values.postInstallHook.enabled }}
+#   annotations:
+#     "helm.sh/hook": post-install
+#     "helm.sh/hook-weight": {{ .Values.postInstallHook.weight | quote }}
+#     "helm.sh/hook-delete-policy": {{ .Values.postInstallHook.deletePolicy }}
+#   {{- end }}
+# spec:
+#   backoffLimit: {{ .Values.backoffLimit }}
+#   restartPolicy: {{ .Values.restartPolicy }}
+#   {{- include "ml-testing-toolkit-cli.jobtemplate" . | indent 2 }}
+
 kind: Job
 metadata:
   name: {{ template "ml-testing-toolkit-cli.fullname" . }}
   {{- if .Values.postInstallHook.enabled }}
   annotations:
-    "helm.sh/hook": post-install
-    "helm.sh/hook-weight": {{ .Values.postInstallHook.weight | quote }}
-    "helm.sh/hook-delete-policy": {{ .Values.postInstallHook.deletePolicy }}
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "0"
   {{- end }}
 spec:
   backoffLimit: {{ .Values.backoffLimit }}

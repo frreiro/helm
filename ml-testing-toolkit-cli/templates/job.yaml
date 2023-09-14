@@ -33,11 +33,11 @@ apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.Job" . }}
 kind: Job
 metadata:
   name: {{ template "ml-testing-toolkit-cli.fullname" . }}
-  {{- if .Values.postInstallHook.enabled }}
+  # {{- if .Values.postInstallHook.enabled }}
   annotations:
-    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/hook: PreSync #Change to PostSync -> used to test locally cause nginx problem
     argocd.argoproj.io/sync-wave: "0"
-  {{- end }}
+  # {{- end }}
 spec:
   backoffLimit: {{ .Values.backoffLimit }}
   restartPolicy: {{ .Values.restartPolicy }}

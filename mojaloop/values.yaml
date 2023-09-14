@@ -12841,6 +12841,7 @@ ml-testing-toolkit:
 
     ingress:
       enabled: true
+      className: "nginx"
       hosts:
         specApi:
           host: testing-toolkit-specapi.local
@@ -13136,6 +13137,7 @@ ml-testing-toolkit:
   ml-testing-toolkit-frontend:
     ingress:
       enabled: true
+      className: "nginx"
       hosts:
         ui:
           host: testing-toolkit.local

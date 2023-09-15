@@ -13144,9 +13144,9 @@ ml-testing-toolkit:
     config:
       API_BASE_URL: http://testing-toolkit.local
 
-# ml-ttk-posthook-setup:
-#   postInstallHook:
-#     enabled: false
+ml-ttk-posthook-setup:
+  postInstallHook:
+    enabled: false
 #     weight: -5
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13157,9 +13157,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile: *ttkInputValues
 
-# ml-ttk-posthook-tests:
-#   postInstallHook:
-#     enabled: false
+ml-ttk-posthook-tests:
+  postInstallHook:
+    enabled: false
 #     weight: -4
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13299,9 +13299,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile: *ttkInputValues
 
-# ml-ttk-test-setup:
-#   tests:
-#     enabled: true
+ml-ttk-test-setup:
+  tests:
+    enabled: true
 #     weight: -9
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13322,9 +13322,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile: *ttkInputValues
 
-# ml-ttk-test-val-gp:
-#   tests:
-#     enabled: true
+ml-ttk-test-val-gp:
+  tests:
+    enabled: true
 #     weight: -8
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13367,9 +13367,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile: *ttkInputValues
 
-# ml-ttk-test-val-bulk:
-#   tests:
-#     enabled: false
+ml-ttk-test-val-bulk:
+  tests:
+    enabled: false
 #     weight: -7
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13412,9 +13412,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile: *ttkInputValues
 
-# ml-ttk-test-setup-tp:
-#   tests:
-#     enabled: false
+ml-ttk-test-setup-tp:
+  tests:
+    enabled: false
 #     weight: -6
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13457,9 +13457,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile: *ttkInputValues
 
-# ml-ttk-test-val-tp:
-#   tests:
-#     enabled: false
+ml-ttk-test-val-tp:
+  tests:
+    enabled: false
 #     weight: -5
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13502,9 +13502,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile:  *ttkInputValues
 
-# ml-ttk-test-setup-sdk-bulk:
-#   tests:
-#     enabled: false
+ml-ttk-test-setup-sdk-bulk:
+  tests:
+    enabled: false
 #     weight: -4
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13547,9 +13547,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile: *ttkInputValues
 
-# ml-ttk-test-val-sdk-bulk:
-#   tests:
-#     enabled: false
+ml-ttk-test-val-sdk-bulk:
+  tests:
+    enabled: false
 #     weight: -2
 #     weight: -3
 #   config:
@@ -13593,9 +13593,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile:  *ttksim1InputValues
 
-# ml-ttk-test-val-sdk-r2p:
-#   tests:
-#     enabled: false
+ml-ttk-test-val-sdk-r2p:
+  tests:
+    enabled: false
 #     weight: -2
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
@@ -13638,9 +13638,9 @@ ml-testing-toolkit:
 #     <<: *simNames
 #   testCaseEnvironmentFile:  *ttksim1InputValues
 
-# ml-ttk-test-cleanup:
-#   tests:
-#     enabled: true
+ml-ttk-test-cleanup:
+  tests:
+    enabled: true
 #     weight: -1
 #   config:
 #     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases

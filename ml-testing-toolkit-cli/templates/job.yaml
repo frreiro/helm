@@ -30,16 +30,34 @@ apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.Job" . }}
 #   restartPolicy: {{ .Values.restartPolicy }}
 #   {{- include "ml-testing-toolkit-cli.jobtemplate" . | indent 2 }}
 
+# kind: Job
+# metadata:
+#   name: {{ template "ml-testing-toolkit-cli.fullname" . }}
+#   # {{- if .Values.postInstallHook.enabled }}
+#   annotations:
+#     argocd.argoproj.io/hook: PreSync #Change to PostSync -> used to test locally cause nginx problem
+#     argocd.argoproj.io/sync-wave: "0"
+#   # {{- end }}
+# spec:
+#   backoffLimit: {{ .Values.backoffLimit }}
+#   restartPolicy: {{ .Values.restartPolicy }}
+#   {{- include "ml-testing-toolkit-cli.jobtemplate" . | indent 2 }}
+
 kind: Job
 metadata:
-  name: {{ template "ml-testing-toolkit-cli.fullname" . }}
-  # {{- if .Values.postInstallHook.enabled }}
+  generateName: app-test-hook-pre-
   annotations:
-    argocd.argoproj.io/hook: PreSync #Change to PostSync -> used to test locally cause nginx problem
+    argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/sync-wave: "0"
-  # {{- end }}
 spec:
-  backoffLimit: {{ .Values.backoffLimit }}
-  restartPolicy: {{ .Values.restartPolicy }}
-  {{- include "ml-testing-toolkit-cli.jobtemplate" . | indent 2 }}
+  template:
+    spec:
+      containers:
+      - name: testepostsync
+        image: bash
+        command:
+          - "sleep"
+          - "20"
+      restartPolicy: Never
+  backoffLimit: 2
 {{- end }}

@@ -72,7 +72,7 @@ dependencies:
     version: 15.3.1
     repository: "file://../ml-testing-toolkit-cli"
     # condition: ml-ttk-test-setup.tests.enabled
-  - name: ml-testing-toolkit-cli
+  # - name: ml-testing-toolkit-cli
   #   alias: ml-ttk-test-val-gp
   #   version: 15.3.1
   #   repository: "file://../ml-testing-toolkit-cli"

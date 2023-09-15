@@ -1,3 +1,4 @@
+
 # Default values for ml-testing-toolkit-cli.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
@@ -87,6 +88,8 @@ tests:
   enabled: false
   weight: -5
   deletePolicy: before-hook-creation
+  argocd:
+    wave: 0
 
 postInstallHook:
   enabled: false

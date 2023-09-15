@@ -4,7 +4,7 @@ metadata:
   generateName: {{ template "ml-testing-toolkit-cli.fullname" . }}
   annotations:
     argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/sync-wave: {{ .Values.tests.argocd.wave }}
 spec:
   backoffLimit: {{ .Values.backoffLimit }}
   restartPolicy: {{ .Values.restartPolicy }}

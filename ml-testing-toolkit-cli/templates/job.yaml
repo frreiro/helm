@@ -1,7 +1,7 @@
-apiVersion: batch/v1
+apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.Job" . }}
 kind: Job
 metadata:
-  generateName: app-test-hook-pre-
+  generateName: {{ template "ml-testing-toolkit-cli.fullname" . }}
   annotations:
     argocd.argoproj.io/hook: PreSync
     argocd.argoproj.io/sync-wave: "0"

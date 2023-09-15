@@ -6,11 +6,9 @@ metadata:
     argocd.argoproj.io/hook: PostSync
     argocd.argoproj.io/sync-wave: "0"
 spec:
-  template:
-    spec:
-      backoffLimit: {{ .Values.backoffLimit }}
-      restartPolicy: {{ .Values.restartPolicy }}
-      {{- include "ml-testing-toolkit-cli.jobtemplate" . | indent 2 }}
+  backoffLimit: {{ .Values.backoffLimit }}
+  restartPolicy: {{ .Values.restartPolicy }}
+  {{- include "ml-testing-toolkit-cli.jobtemplate" . | indent 2 }}
   backoffLimit: 2
 
 # {{- if .Values.scheduling.enabled }}

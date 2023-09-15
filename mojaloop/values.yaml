@@ -12770,6 +12770,8 @@
 #       #  cpu: 100m
 #       #  memory: 128Mi
 #       resources: {}
+argocd:
+  enabled: true
 
 ml-testing-toolkit:
   enabled: true

@@ -3,7 +3,7 @@ entries:
   account-lookup-service:
   - apiVersion: v2
     appVersion: 'account-lookup-service: v14.1.0; als-oracle-pathfinder: v12.0.0'
-    created: "2023-09-15T17:04:16.188376041-03:00"
+    created: "2023-09-15T17:29:58.022387767-03:00"
     dependencies:
     - condition: account-lookup-service.enabled
       name: account-lookup-service
@@ -23,7 +23,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Account Lookup Service Helm Chart for Mojaloop
-    digest: 35d3112dd9f74112c848f868819a64a2086fde73c6af5ccbf368096d19a8b22e
+    digest: d49476610a017aea35133071e8a1a3a8ba3d17cadcdbdfeb1b15922e53790925
     maintainers:
     - email: miguel.debarros@modusbox.com
       name: Miguel de Barros
@@ -31,12 +31,12 @@ entries:
       name: Tom Daly
     name: account-lookup-service
     urls:
-    - https://github.com/frreiro/helm/repo/account-lookup-service-14.1.0.tgz
+    - https://frreiro.github.io/helm/repo/account-lookup-service-14.1.0.tgz
     version: 14.1.0
   als-oracle-pathfinder:
   - apiVersion: v2
     appVersion: 12.0.0
-    created: "2023-09-15T17:04:16.193838101-03:00"
+    created: "2023-09-15T17:29:58.027742567-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -44,7 +44,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: A PathFinder oracle for ALS. Resolves MSISDN to participant ID.
-    digest: 2009500a09edaf93e28184601ca3202c2543fe290d058ad9cbbccf53d551e5c1
+    digest: 02b6fb2ade1b89a0bd3618654943cb374e46c2dc31e6c7efefa2b45eab7a146d
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -58,12 +58,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/als-oracle-pathfinder
     urls:
-    - https://github.com/frreiro/helm/repo/als-oracle-pathfinder-13.0.0.tgz
+    - https://frreiro.github.io/helm/repo/als-oracle-pathfinder-13.0.0.tgz
     version: 13.0.0
   auth-svc:
   - apiVersion: v2
     appVersion: 14.0.0
-    created: "2023-09-15T17:04:16.199045292-03:00"
+    created: "2023-09-15T17:29:58.033919369-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -71,7 +71,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: auth-svc chart for Mojaloop Thirdparty Services
-    digest: 559dedd5972aba81dfa7cd932e6d6fa4b7350fafadf314b0d6773f46156d770c
+    digest: f60ce55018dbbf358dc029b8b3ee69da60326744e98f1ece529bd8809827d736
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -85,12 +85,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/auth-service
     urls:
-    - https://github.com/frreiro/helm/repo/auth-svc-3.0.0.tgz
+    - https://frreiro.github.io/helm/repo/auth-svc-3.0.0.tgz
     version: 3.0.0
   bulk-api-adapter:
   - apiVersion: v2
     appVersion: 15.0.3
-    created: "2023-09-15T17:04:16.206261681-03:00"
+    created: "2023-09-15T17:29:58.04222433-03:00"
     dependencies:
     - condition: bulk-api-adapter-service.enabled
       name: bulk-api-adapter-service
@@ -106,7 +106,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: bulk-api-adapter Helm chart for Kubernetes
-    digest: e3b869b5e940c5ed2e2b409c12aa08999eb7606e3d393b8e39f0fa8efbf6e08d
+    digest: d54ff1d91d0b04f0d53c8cda70ce1b56bf45f5cd58ffdbacbee932ac327fa05b
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -120,12 +120,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/bulk-api-adapter
     urls:
-    - https://github.com/frreiro/helm/repo/bulk-api-adapter-13.0.0.tgz
+    - https://frreiro.github.io/helm/repo/bulk-api-adapter-13.0.0.tgz
     version: 13.0.0
   bulk-centralledger:
   - apiVersion: v2
     appVersion: 17.0.3
-    created: "2023-09-15T17:04:16.21643909-03:00"
+    created: "2023-09-15T17:29:58.05462997-03:00"
     dependencies:
     - condition: cl-handler-bulk-transfer-prepare.enabled
       name: cl-handler-bulk-transfer-prepare
@@ -149,7 +149,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Central-Ledger Bulk Services Helm chart for Kubernetes
-    digest: 7a637bc01c3a01b9bfce86963208650458cff9a0101039c14fd586a16e995954
+    digest: e4fae8c2d65e85a8c851cc877dd7a6f08482fc42164b80d189a780df66c93ec8
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -163,12 +163,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/central-ledger
     urls:
-    - https://github.com/frreiro/helm/repo/bulk-centralledger-14.0.0.tgz
+    - https://frreiro.github.io/helm/repo/bulk-centralledger-14.0.0.tgz
     version: 14.0.0
   centraleventprocessor:
   - apiVersion: v2
     appVersion: 12.0.0
-    created: "2023-09-15T17:04:16.221936606-03:00"
+    created: "2023-09-15T17:29:58.061011533-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -176,7 +176,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Central Event Processor for Mojaloop
-    digest: dc5854d7030374422e6b21cf3daf20bbafe9db0d41f3164209f352c63bb437f1
+    digest: 6115aeb89183a2d8b0a8752545f02ee5746c31bcf49c83f009ca9d138d9700fc
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -190,12 +190,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/central-event-processor
     urls:
-    - https://github.com/frreiro/helm/repo/centraleventprocessor-13.0.0.tgz
+    - https://frreiro.github.io/helm/repo/centraleventprocessor-13.0.0.tgz
     version: 13.0.0
   centralledger:
   - apiVersion: v2
     appVersion: 17.0.3
-    created: "2023-09-15T17:04:16.238965165-03:00"
+    created: "2023-09-15T17:29:58.078627557-03:00"
     dependencies:
     - condition: centralledger-service.enabled
       name: centralledger-service
@@ -231,7 +231,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Central-Ledger Helm chart for Kubernetes
-    digest: 39e3c595aa51aed9eb4641d6ccd3e7fddd6d5108ed9bfd8fe898da67217a5ebc
+    digest: d7e4236ef476b1929af92518558f0349556721cf6ce4c2b77e2166295b199e50
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -245,12 +245,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/central-ledger
     urls:
-    - https://github.com/frreiro/helm/repo/centralledger-14.0.0.tgz
+    - https://frreiro.github.io/helm/repo/centralledger-14.0.0.tgz
     version: 14.0.0
   centralsettlement:
   - apiVersion: v2
     appVersion: v15.0.0
-    created: "2023-09-15T17:04:16.247054161-03:00"
+    created: "2023-09-15T17:29:58.088989185-03:00"
     dependencies:
     - alias: centralsettlement-service
       condition: centralsettlement-service.enabled
@@ -278,7 +278,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Central-Settlement Helm chart for Kubernetes
-    digest: 25eb7433c0909c6dcf85f1a98f9300ea74b10db4f443a6789d0118519d3e910b
+    digest: 048bc96a5b34154ccf61f7de03e0c47facdfb397ab5ab0ec16280fced6b38a04
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -292,12 +292,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/central-settlement
     urls:
-    - https://github.com/frreiro/helm/repo/centralsettlement-14.1.0.tgz
+    - https://frreiro.github.io/helm/repo/centralsettlement-14.1.0.tgz
     version: 14.1.0
   consent-oracle:
   - apiVersion: v2
     appVersion: 0.2.0
-    created: "2023-09-15T17:04:16.251922478-03:00"
+    created: "2023-09-15T17:29:58.095877144-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -305,7 +305,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: consent-oracle chart for Mojaloop Thirdparty Overlay Services
-    digest: 5fb18a054b4d61971185f6ee92dcec5597af8258ca572f320f16b1d20fc6b825
+    digest: d722a2a5ffae4dacd6c5858b12eaece93f206629f7a4cb3ebd1d4c9d2cbcd253
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -319,13 +319,13 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/als-consent-oracle
     urls:
-    - https://github.com/frreiro/helm/repo/consent-oracle-0.4.0.tgz
+    - https://frreiro.github.io/helm/repo/consent-oracle-0.4.0.tgz
     version: 0.4.0
   efk:
   - apiVersion: v2
     appVersion: 'elasticsearch: 7.11.1; kibana: 7.11.1; apm-server: 7.11.1; fluentd-elasticsearch:
       3.2.0'
-    created: "2023-09-15T17:04:16.262239477-03:00"
+    created: "2023-09-15T17:29:58.109878568-03:00"
     dependencies:
     - condition: fluentd-elasticsearch.enabled
       name: fluentd-elasticsearch
@@ -349,7 +349,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: A Helm chart containing ELK for Kubernetes
-    digest: 34ff79483961f6a3a29d9ab7e9ba072b7edab45aa4fd0fe263a264df2f8d0d6f
+    digest: ae50ee116e043b9d54dff65c219239c7e01264e07a1bab7f035ee8b92c3dd20a
     maintainers:
     - email: miguel.debarros@modusbox.com
       name: Miguel de Barros
@@ -357,12 +357,12 @@ entries:
       name: Tom Daly
     name: efk
     urls:
-    - https://github.com/frreiro/helm/repo/efk-12.1.0.tgz
+    - https://frreiro.github.io/helm/repo/efk-12.1.0.tgz
     version: 12.1.0
   emailnotifier:
   - apiVersion: v2
     appVersion: 12.0.0
-    created: "2023-09-15T17:04:16.267178313-03:00"
+    created: "2023-09-15T17:29:58.116165003-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -370,7 +370,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Email Notifier For Mojaloop
-    digest: e50aa3e4f47eb3ed2928da6454d555e115c8009f2ee3a6d98476e3ebd4e34550
+    digest: 22671adb9ac2641cce5e540253bccb81138785d43cb58f5debf1a1136e70bc3f
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -386,12 +386,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/email-notifier
     urls:
-    - https://github.com/frreiro/helm/repo/emailnotifier-13.0.0.tgz
+    - https://frreiro.github.io/helm/repo/emailnotifier-13.0.0.tgz
     version: 13.0.0
   eventstreamprocessor:
   - apiVersion: v2
     appVersion: 12.0.0-snapshot.7
-    created: "2023-09-15T17:04:16.272069667-03:00"
+    created: "2023-09-15T17:29:58.121870732-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -399,7 +399,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Event Stream Processor for Mojaloop
-    digest: c4cdfd805fb680c0bf9b2e1f6314fd9f2156982cf954e5a691c41a0c4bfd7018
+    digest: 03300adbb740c8ceea1b2b43e6283144cf506e63f3e3079b7e051a8cf36bfa6e
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -413,12 +413,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/event-stream-processor
     urls:
-    - https://github.com/frreiro/helm/repo/eventstreamprocessor-13.0.0.tgz
+    - https://frreiro.github.io/helm/repo/eventstreamprocessor-13.0.0.tgz
     version: 13.0.0
   example-mojaloop-backend:
   - apiVersion: v2
     appVersion: 'nginx: 4.4.2 ; mysql: 9.4.1; kafka: 19.0.2; mongodb: 13.3.1; redis:17.3.7'
-    created: "2023-09-15T17:04:16.303261026-03:00"
+    created: "2023-09-15T17:29:58.154640311-03:00"
     dependencies:
     - alias: kafka
       condition: kafka.enabled
@@ -500,7 +500,7 @@ entries:
       - thirdparty
       version: 17.3.7
     description: Example Helm chart for mojaloop backend dependencies
-    digest: 7e79962b79530536626f89e80e7b53352966d65e3813f7b7c8ad4b07778fc94b
+    digest: 9477f12875fec4412dc3d0a163608fdef0136520a75204f48301258b9823cc47
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -515,12 +515,12 @@ entries:
     - https://github.com/mojaloop/mojaloop
     - https://github.com/mojaloop/helm
     urls:
-    - https://github.com/frreiro/helm/repo/example-mojaloop-backend-15.0.0.tgz
+    - https://frreiro.github.io/helm/repo/example-mojaloop-backend-15.0.0.tgz
     version: 15.0.0
   ml-api-adapter:
   - apiVersion: v2
     appVersion: 14.0.0
-    created: "2023-09-15T17:04:16.311365973-03:00"
+    created: "2023-09-15T17:29:58.161420227-03:00"
     dependencies:
     - condition: ml-api-adapter-service.enabled
       name: ml-api-adapter-service
@@ -536,7 +536,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: ml-api-adapter Helm chart for Kubernetes
-    digest: 44f01b65951d7b02d90ef59fa842e10972d49ebd447b4327203f3e5ae54dbefe
+    digest: 87961d8b45abbb48d2d52b2e7713c2da42a0586a87e7de9f0b7a6c164ed3bd0b
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -550,12 +550,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/ml-api-adapter
     urls:
-    - https://github.com/frreiro/helm/repo/ml-api-adapter-13.0.0.tgz
+    - https://frreiro.github.io/helm/repo/ml-api-adapter-13.0.0.tgz
     version: 13.0.0
   ml-operator:
   - apiVersion: v2
     appVersion: 0.1.3
-    created: "2023-09-15T17:04:16.316028145-03:00"
+    created: "2023-09-15T17:29:58.16639679-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -563,7 +563,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: ml-operator makes running and managing a Mojaloop deployment easier
-    digest: 8786d74d770375d679df9a79e2c37cde97daa305ebe1ebfae49061d75438dc60
+    digest: 1d7562259f7985b42c5989435151bf6fe4aa8f11c02e6d91ccaa4a1f710b522a
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -577,12 +577,12 @@ entries:
     - https://github.com/mojaloop/helm
     type: application
     urls:
-    - https://github.com/frreiro/helm/repo/ml-operator-0.2.0.tgz
+    - https://frreiro.github.io/helm/repo/ml-operator-0.2.0.tgz
     version: 0.2.0
   ml-testing-toolkit:
   - apiVersion: v2
     appVersion: 'ml-testing-toolkit: v16.1.1 ml-testing-toolkit-ui: v15.4.0'
-    created: "2023-09-15T17:04:16.323163424-03:00"
+    created: "2023-09-15T17:29:58.172972712-03:00"
     dependencies:
     - condition: ml-testing-toolkit-frontend.enabled
       name: ml-testing-toolkit-frontend
@@ -598,7 +598,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: ml-testing-toolkit Helm chart for Kubernetes
-    digest: 95f010f16ac4af1983ab9d2cccc6282604f7e71efa8fae529ac56bcbb19405f9
+    digest: 373f8186ee3423d037dfd05e98a630260948a5aa1449b195c24e91ecb37ccaa0
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -617,12 +617,12 @@ entries:
     - https://github.com/modusbox/connection-manager-api
     - https://github.com/modusbox/connection-manager-ui
     urls:
-    - https://github.com/frreiro/helm/repo/ml-testing-toolkit-16.3.0.tgz
+    - https://frreiro.github.io/helm/repo/ml-testing-toolkit-16.3.0.tgz
     version: 16.3.0
   ml-testing-toolkit-cli:
   - apiVersion: v2
     appVersion: v1.2.0
-    created: "2023-09-15T17:04:16.329117993-03:00"
+    created: "2023-09-15T17:29:58.177274361-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -630,7 +630,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: ml-testing-toolkit-cli Helm chart for Kubernetes
-    digest: d762778d7a4df8274aa5e61b227671263a5e36e0a903aee595257fc917049f5d
+    digest: e3b237554fbf535ac14398d152f50627f5bf4ee906e1611907482b9bdb5a744e
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -646,7 +646,7 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/ml-testing-toolkit
     urls:
-    - https://github.com/frreiro/helm/repo/ml-testing-toolkit-cli-15.3.1.tgz
+    - https://frreiro.github.io/helm/repo/ml-testing-toolkit-cli-15.3.1.tgz
     version: 15.3.1
   mojaloop:
   - apiVersion: v2
@@ -656,7 +656,7 @@ entries:
       v14.0.1; sdk-scheme-adapter: v23.0.1; auth-service: v14.0.0; consent-oracle:
       v0.2.0; thirdparty-sdk: v13.0.2; ml-testing-toolkit: v16.1.1; ml-testing-toolkit-ui:
       v15.4.0;'
-    created: "2023-09-15T17:04:16.461613713-03:00"
+    created: "2023-09-15T17:29:58.318542665-03:00"
     dependencies:
     - condition: account-lookup-service.enabled
       name: account-lookup-service
@@ -717,7 +717,7 @@ entries:
       repository: file://../ml-testing-toolkit-cli
       version: 15.3.1
     description: Mojaloop Helm chart for Kubernetes
-    digest: 0fd39dff1cb2699a7cc3c339cb5827e2e37dd4f3d2bf7da14ee59b8cbd68afac
+    digest: d34286df31981a91551d7f25547ad9e4bc43112bde2104c2b4482fcdffd99dd2
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -730,12 +730,12 @@ entries:
     - https://github.com/mojaloop/mojaloop
     - https://github.com/mojaloop/helm
     urls:
-    - https://github.com/frreiro/helm/repo/mojaloop-15.1.0.tgz
+    - https://frreiro.github.io/helm/repo/mojaloop-15.1.0.tgz
     version: 15.1.0
   mojaloop-bulk:
   - apiVersion: v2
     appVersion: 'bulk-api-adapter: v15.0.3; central-ledger: v17.0.3'
-    created: "2023-09-15T17:04:16.478737176-03:00"
+    created: "2023-09-15T17:29:58.335574198-03:00"
     dependencies:
     - condition: bulk-api-adapter.enabled
       name: bulk-api-adapter
@@ -751,7 +751,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Mojaloop Bulk Helm chart for Kubernetes
-    digest: 5e567d5bbd935f1a43068c0825aa8f24160044f356fa338b9afd4a653ace061a
+    digest: 8745972504e00dd89aa19d4edd0a28d5b9585fea3adfd134615664be6a4176d2
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -764,13 +764,13 @@ entries:
     - https://github.com/mojaloop/mojaloop
     - https://github.com/mojaloop/helm
     urls:
-    - https://github.com/frreiro/helm/repo/mojaloop-bulk-15.0.0.tgz
+    - https://frreiro.github.io/helm/repo/mojaloop-bulk-15.0.0.tgz
     version: 15.0.0
   mojaloop-simulator:
   - apiVersion: v2
     appVersion: 'sdk-scheme-adapter: v23.0.1; mojaloop-simulator: v14.0.1; thirdparty-sdk:
       v15.1.0'
-    created: "2023-09-15T17:04:16.48426983-03:00"
+    created: "2023-09-15T17:29:58.340790156-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -778,7 +778,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Helm Chart for the Mojaloop (SDK-based) Simulator
-    digest: 71fca078f78703100722ce2ac89a81b17a54673366a9f51a9fd78ae7c0e227f1
+    digest: f98344cd9bf7770d215effcba8efe235bd7190ce6f01d11a7d6b87092cc56628
     maintainers:
     - email: miguel.debarros@modusbox.com
       name: Miguel de Barros
@@ -786,13 +786,13 @@ entries:
       name: Tom Daly
     name: mojaloop-simulator
     urls:
-    - https://github.com/frreiro/helm/repo/mojaloop-simulator-14.2.0.tgz
+    - https://frreiro.github.io/helm/repo/mojaloop-simulator-14.2.0.tgz
     version: 14.2.0
   mojaloop-ttk-sim1-svc:
   - apiVersion: v2
     appVersion: 'ml-testing-toolkit: v16.1.1, ml-testing-toolkit-ui: v15.4.0, sdk-scheme-adapter:
       v23.0.1'
-    created: "2023-09-15T17:04:16.498322126-03:00"
+    created: "2023-09-15T17:29:58.352995221-03:00"
     dependencies:
     - condition: sdk-scheme-adapter.enabled
       name: sdk-scheme-adapter
@@ -812,7 +812,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: A Helm chart for Kubernetes
-    digest: 86065cf2dba1b7d353fd095e552505303e9e7f0fede5113abd291b8c02bb1251
+    digest: 40fe40fde908522c0f6a582fbe6c3412dc1dac22ccbc154b85f35f2d3dc6889b
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -824,13 +824,13 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/sdk-scheme-adapter
     urls:
-    - https://github.com/frreiro/helm/repo/mojaloop-ttk-sim1-svc-1.5.0.tgz
+    - https://frreiro.github.io/helm/repo/mojaloop-ttk-sim1-svc-1.5.0.tgz
     version: 1.5.0
   mojaloop-ttk-sim2-svc:
   - apiVersion: v2
     appVersion: 'ml-testing-toolkit: v16.1.1, ml-testing-toolkit-ui: v15.4.0, sdk-scheme-adapter:
       v23.0.1'
-    created: "2023-09-15T17:04:16.512221361-03:00"
+    created: "2023-09-15T17:29:58.364812075-03:00"
     dependencies:
     - condition: sdk-scheme-adapter.enabled
       name: sdk-scheme-adapter
@@ -850,7 +850,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: A Helm chart for Kubernetes
-    digest: cf5efd2de390f1400fc2d522cf6b31f02f2209656ffb7ff09276bab3b3d87d6f
+    digest: bee9b704feda4fac6b478c9b938b92680584db82de5f972e4a7a799b63d834f7
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -862,13 +862,13 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/sdk-scheme-adapter
     urls:
-    - https://github.com/frreiro/helm/repo/mojaloop-ttk-sim2-svc-1.5.0.tgz
+    - https://frreiro.github.io/helm/repo/mojaloop-ttk-sim2-svc-1.5.0.tgz
     version: 1.5.0
   mojaloop-ttk-sim3-svc:
   - apiVersion: v2
     appVersion: 'ml-testing-toolkit: v16.1.1, ml-testing-toolkit-ui: v15.4.0, sdk-scheme-adapter:
       v23.0.1'
-    created: "2023-09-15T17:04:16.525355165-03:00"
+    created: "2023-09-15T17:29:58.379258811-03:00"
     dependencies:
     - condition: sdk-scheme-adapter.enabled
       name: sdk-scheme-adapter
@@ -888,7 +888,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: A Helm chart for Kubernetes
-    digest: eec6dad60a2adf46cc3659c683c8e5bdb567f2e4cfeb23e2fdac5d98d7af6f3b
+    digest: aecc98157a2e67a8c270faab35e543a31b9fb461693922dc189e9ff8bbeb13fe
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -900,13 +900,13 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/sdk-scheme-adapter
     urls:
-    - https://github.com/frreiro/helm/repo/mojaloop-ttk-sim3-svc-1.5.0.tgz
+    - https://frreiro.github.io/helm/repo/mojaloop-ttk-sim3-svc-1.5.0.tgz
     version: 1.5.0
   mojaloop-ttk-simulators:
   - apiVersion: v2
     appVersion: 'ml-testing-toolkit: v16.1.1, ml-testing-toolkit-ui: v15.4.0, sdk-scheme-adapter:
       v23.0.1'
-    created: "2023-09-15T17:04:16.560539669-03:00"
+    created: "2023-09-15T17:29:58.415069039-03:00"
     dependencies:
     - condition: mojaloop-ttk-sim1-svc.enabled
       name: mojaloop-ttk-sim1-svc
@@ -933,7 +933,7 @@ entries:
       - sdk-scheme-adapter
       version: 1.5.0
     description: mojaloop-ttk-simulator Helm chart for Kubernetes
-    digest: 649c5aeb6658d0938c9a9fe337ed9a6f8f8ae2b2b6e41cd4ff7e9bcae18e39d4
+    digest: a31954c78183cf063fbb4404404a3613f338999189e2c49e7431d63d57e67506
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -945,12 +945,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/sdk-scheme-adapter
     urls:
-    - https://github.com/frreiro/helm/repo/mojaloop-ttk-simulators-1.5.0.tgz
+    - https://frreiro.github.io/helm/repo/mojaloop-ttk-simulators-1.5.0.tgz
     version: 1.5.0
   ntpd:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2023-09-15T17:04:16.565645079-03:00"
+    created: "2023-09-15T17:29:58.419372429-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -958,7 +958,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: ntpd Helm chart for Kubernetes
-    digest: 94891bf46bd9402befdbde6e924ff05ff49d80a27a02fad0dc8bc6fa3e1c0048
+    digest: bd1daed9cbb53cc78d27373f959bb36a35d689f4287f118779cd21706a20050e
     maintainers:
     - email: miguel.debarros@modusbox.com
       name: Miguel de Barros
@@ -966,12 +966,12 @@ entries:
       name: Tom Daly
     name: ntpd
     urls:
-    - https://github.com/frreiro/helm/repo/ntpd-0.3.0.tgz
+    - https://frreiro.github.io/helm/repo/ntpd-0.3.0.tgz
     version: 0.3.0
   promfana:
   - apiVersion: v2
     appVersion: 'Prometheus: v2.20.1; Grafana: v7.1.1'
-    created: "2023-09-15T17:04:16.579083115-03:00"
+    created: "2023-09-15T17:29:58.43200195-03:00"
     dependencies:
     - alias: prometheus
       name: prometheus
@@ -987,7 +987,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: A Helm chart containing Prometheus & Grafana for Kubernetes
-    digest: 932676769c2a8205f349143c3dcd8a412dfbc544c390ef5cde455cf9651f4084
+    digest: 3180dc3a2dc64976d910ed13f47a318543e096e505de7040cfb4bc88779533ed
     maintainers:
     - email: miguel.debarros@modusbox.com
       name: Miguel de Barros
@@ -995,12 +995,12 @@ entries:
       name: Tom Daly
     name: promfana
     urls:
-    - https://github.com/frreiro/helm/repo/promfana-11.1.0.tgz
+    - https://frreiro.github.io/helm/repo/promfana-11.1.0.tgz
     version: 11.1.0
   quoting-service:
   - apiVersion: v2
     appVersion: 15.0.2
-    created: "2023-09-15T17:04:16.585329085-03:00"
+    created: "2023-09-15T17:29:58.437269502-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -1008,7 +1008,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Quoting-Service Helm chart for Kubernetes
-    digest: c60ef0fae5639383aa0f699032e1865477c492bf6a942af63b7e02a490730d28
+    digest: 7d4d27837e1afef503473e1199866701bed5021de88b9268360149f7e772f875
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -1021,12 +1021,12 @@ entries:
     - https://github.com/mojaloop/quoting-service
     - https://github.com/mojaloop/helm
     urls:
-    - https://github.com/frreiro/helm/repo/quoting-service-14.0.0.tgz
+    - https://frreiro.github.io/helm/repo/quoting-service-14.0.0.tgz
     version: 14.0.0
   sdk-scheme-adapter:
   - apiVersion: v2
     appVersion: v23.0.1
-    created: "2023-09-15T17:04:16.593311249-03:00"
+    created: "2023-09-15T17:29:58.446381024-03:00"
     dependencies:
     - alias: sdk-scheme-adapter-api-svc
       condition: sdk-scheme-adapter-api-svc.enabled
@@ -1055,7 +1055,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: sdk-scheme-adapter Helm chart for Kubernetes
-    digest: 18a2ed64da21ceb07747ee58e694dc7bc28327ff08bfd93dc7a9acb81dc010e7
+    digest: 1c0c93fbb442d85c8389c9e3a2d3b52712783736d0e634e8b550cd2f4b5ab15e
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -1067,12 +1067,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/sdk-scheme-adapter
     urls:
-    - https://github.com/frreiro/helm/repo/sdk-scheme-adapter-1.1.0.tgz
+    - https://frreiro.github.io/helm/repo/sdk-scheme-adapter-1.1.0.tgz
     version: 1.1.0
   sdk-scheme-adapter-svc:
   - apiVersion: v2
     appVersion: v23.0.1
-    created: "2023-09-15T17:04:16.59989112-03:00"
+    created: "2023-09-15T17:29:58.453264386-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -1080,7 +1080,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: A Helm chart for Kubernetes
-    digest: c4963ce73b6bb4d88a9f4c289261f89c16eccf20a6f8726509041a50eb4dc215
+    digest: 1daa604c85685cda75b613afb52b37c5caf0a35e13052f3b4c3df69af9043e21
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -1092,12 +1092,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/sdk-scheme-adapter
     urls:
-    - https://github.com/frreiro/helm/repo/sdk-scheme-adapter-svc-1.1.0.tgz
+    - https://frreiro.github.io/helm/repo/sdk-scheme-adapter-svc-1.1.0.tgz
     version: 1.1.0
   simulator:
   - apiVersion: v2
     appVersion: 12.0.0
-    created: "2023-09-15T17:04:16.604551354-03:00"
+    created: "2023-09-15T17:29:58.458287338-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -1105,7 +1105,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Simulator Helm Chart for Simulators
-    digest: 4e084255b8c28d141bfa22e389bef6d92219b5d39979d04fb62b3be78c17c886
+    digest: 0fab91f5a8d036d3ee75ebfb2aa23b02d2acbc7c0dff749632fe89c8e309d3fd
     maintainers:
     - email: miguel.debarros@modusbox.com
       name: Miguel de Barros
@@ -1113,12 +1113,12 @@ entries:
       name: Tom Daly
     name: simulator
     urls:
-    - https://github.com/frreiro/helm/repo/simulator-13.0.0.tgz
+    - https://frreiro.github.io/helm/repo/simulator-13.0.0.tgz
     version: 13.0.0
   thirdparty:
   - apiVersion: v2
     appVersion: 'auth-service: v14.0.0; consent-oracle: v0.2.0; thirdparty-sdk: v13.0.2'
-    created: "2023-09-15T17:04:16.620560965-03:00"
+    created: "2023-09-15T17:29:58.474431385-03:00"
     dependencies:
     - condition: auth-svc.enabled
       name: auth-svc
@@ -1143,7 +1143,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Third Party API Support for Mojaloop
-    digest: 3c02b8db8abae501f832847817665c1e75284e0a70f895dae6b91d9b0b845120
+    digest: 04b4079ba3bebd14a9ebaa0f7e79136f0706db2e09aee8f764ba3395b4d1d848
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -1157,12 +1157,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/pisp-project
     urls:
-    - https://github.com/frreiro/helm/repo/thirdparty-3.0.1.tgz
+    - https://frreiro.github.io/helm/repo/thirdparty-3.0.1.tgz
     version: 3.0.1
   tp-api-svc:
   - apiVersion: v2
     appVersion: 13.0.2
-    created: "2023-09-15T17:04:16.625572828-03:00"
+    created: "2023-09-15T17:29:58.479552852-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -1170,7 +1170,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Thirdparty API Service chart for Mojaloop Thirdparty Overlay Services
-    digest: 954c7a5f7790ecfc1cb3e36e5aaad9050903867162a9df6a833f15c9d4ad7c66
+    digest: 0eda2290fa7a0107cc6ac27e4a19192f957aa8b37a0a74c130820aaef5040817
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -1184,12 +1184,12 @@ entries:
     - https://github.com/mojaloop/helm
     - https://github.com/mojaloop/thirdparty-api-svc
     urls:
-    - https://github.com/frreiro/helm/repo/tp-api-svc-3.0.0.tgz
+    - https://frreiro.github.io/helm/repo/tp-api-svc-3.0.0.tgz
     version: 3.0.0
   transaction-requests-service:
   - apiVersion: v2
     appVersion: 14.1.0
-    created: "2023-09-15T17:04:16.630641878-03:00"
+    created: "2023-09-15T17:29:58.484252145-03:00"
     dependencies:
     - name: common
       repository: https://mojaloop.github.io/charts/repo
@@ -1197,7 +1197,7 @@ entries:
       - moja-common
       version: 2.0.0
     description: Transaction-Requests-Service Helm chart for Kubernetes
-    digest: 123c4664f942b1957856235f23e6979e3d383aa2020ace3933cccd9451706ac6
+    digest: df2981755b11a0c73e8b03dbcea0e55af8aefd92664438749bf271435d522e56
     home: http://mojaloop.io
     icon: http://mojaloop.io/images/logo.png
     maintainers:
@@ -1210,6 +1210,6 @@ entries:
     - https://github.com/mojaloop/transaction-requests-service
     - https://github.com/mojaloop/helm
     urls:
-    - https://github.com/frreiro/helm/repo/transaction-requests-service-13.0.0.tgz
+    - https://frreiro.github.io/helm/repo/transaction-requests-service-13.0.0.tgz
     version: 13.0.0
-generated: "2023-09-15T17:04:16.177412005-03:00"
+generated: "2023-09-15T17:29:58.012257585-03:00"

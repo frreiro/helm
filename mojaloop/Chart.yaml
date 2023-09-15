@@ -66,6 +66,9 @@ dependencies:
   - name: ml-testing-toolkit
     version: 16.3.0
     repository: "file://../ml-testing-toolkit"
+  - name: ml-testing-toolkit-backend
+    version: 16.3.0
+    repository: "file://../ml-testing-toolkit/chart-backend"    
     # condition: ml-testing-toolkit.enabled
   - name: ml-testing-toolkit-cli
     alias: ml-ttk-test-setup

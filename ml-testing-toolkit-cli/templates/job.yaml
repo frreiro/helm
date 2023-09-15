@@ -1,4 +1,3 @@
-{{- if .Values.postInstallHook.enabled }}
 apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.Job" . }}
 kind: Job
 metadata:
@@ -11,7 +10,7 @@ spec:
   restartPolicy: {{ .Values.restartPolicy }}
   {{- include "ml-testing-toolkit-cli.jobtemplate" . | indent 2 }}
   backoffLimit: 2
-{{- end }}
+
 # {{- if .Values.scheduling.enabled }}
 # apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.CronJob" . }}
 # kind: CronJob

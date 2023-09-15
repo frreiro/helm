@@ -1,77 +1,77 @@
-# # Common YAML TEMPLATE Anchors
-# CONFIG:
-#   ## ACCOUNT-LOOKUP BACKEND
-#   als_db_name: &ALS_DB_NAME "account_lookup"
-#   als_db_password: &ALS_DB_PASSWORD ''
-#   als_db_secret: &ALS_DB_SECRET
-#     name: &ALS_DB_SECRET_NAME mysqldb
-#     key: &ALS_DB_SECRET_KEY mysql-password
-#   als_db_host: &ALS_DB_HOST 'mysqldb'
-#   als_db_port: &ALS_DB_PORT 3306
-#   als_db_user: &ALS_DB_USER "account_lookup"
+# Common YAML TEMPLATE Anchors
+CONFIG:
+  ## ACCOUNT-LOOKUP BACKEND
+  als_db_name: &ALS_DB_NAME "account_lookup"
+  als_db_password: &ALS_DB_PASSWORD ''
+  als_db_secret: &ALS_DB_SECRET
+    name: &ALS_DB_SECRET_NAME mysqldb
+    key: &ALS_DB_SECRET_KEY mysql-password
+  als_db_host: &ALS_DB_HOST 'mysqldb'
+  als_db_port: &ALS_DB_PORT 3306
+  als_db_user: &ALS_DB_USER "account_lookup"
 
-#   ## CENTRAL-LEDGER BACKEND
-#   cl_db_name: &CL_DB_NAME "central_ledger"
-#   cl_db_password: &CL_DB_PASSWORD ''
-#   cl_db_secret: &CL_DB_SECRET
-#     name: &CL_DB_SECRET_NAME mysqldb
-#     key: &CL_DB_SECRET_KEY mysql-password
-#   cl_db_host: &CL_DB_HOST 'mysqldb'
-#   cl_db_port: &CL_DB_PORT 3306
-#   cl_db_user: &CL_DB_USER "central_ledger"
+  ## CENTRAL-LEDGER BACKEND
+  cl_db_name: &CL_DB_NAME "central_ledger"
+  cl_db_password: &CL_DB_PASSWORD ''
+  cl_db_secret: &CL_DB_SECRET
+    name: &CL_DB_SECRET_NAME mysqldb
+    key: &CL_DB_SECRET_KEY mysql-password
+  cl_db_host: &CL_DB_HOST 'mysqldb'
+  cl_db_port: &CL_DB_PORT 3306
+  cl_db_user: &CL_DB_USER "central_ledger"
 
-#   ## KAFKA BACKEND
-#   kafka_host: &KAFKA_HOST 'kafka'
-#   kafka_port: &KAFKA_PORT 9092
+  ## KAFKA BACKEND
+  kafka_host: &KAFKA_HOST 'kafka'
+  kafka_port: &KAFKA_PORT 9092
 
-#   ## BULK OBJECT STORE BACKEND
-#   obj_mongo_host: &OBJSTORE_MONGO_HOST 'cl-mongodb'
-#   obj_mongo_port: &OBJSTORE_MONGO_PORT 27017
-#   obj_mongo_user: &OBJSTORE_MONGO_USER mojaloop
-#   obj_mongo_password: &OBJSTORE_MONGO_PASSWORD ''
-#   obj_mongo_secret: &OBJSTORE_MONGO_SECRET
-#     name: &OBJSTORE_MONGO_SECRET_NAME cl-mongodb
-#     key: &OBJSTORE_MONGO_SECRET_KEY mongodb-passwords
-#   obj_mongo_database: &OBJSTORE_MONGO_DATABASE mlos
+  ## BULK OBJECT STORE BACKEND
+  obj_mongo_host: &OBJSTORE_MONGO_HOST 'cl-mongodb'
+  obj_mongo_port: &OBJSTORE_MONGO_PORT 27017
+  obj_mongo_user: &OBJSTORE_MONGO_USER mojaloop
+  obj_mongo_password: &OBJSTORE_MONGO_PASSWORD ''
+  obj_mongo_secret: &OBJSTORE_MONGO_SECRET
+    name: &OBJSTORE_MONGO_SECRET_NAME cl-mongodb
+    key: &OBJSTORE_MONGO_SECRET_KEY mongodb-passwords
+  obj_mongo_database: &OBJSTORE_MONGO_DATABASE mlos
 
-#   ## TTK MONGODB BACKEND
-#   ttk_mongo_host: &TTK_MONGO_HOST "ttk-mongodb"
-#   ttk_mongo_port: &TTK_MONGO_PORT "27017"
-#   ttk_mongo_user: &TTK_MONGO_USER "ttk"
-#   ttk_mongo_password: &TTK_MONGO_PASSWORD ""
-#   ttk_mongo_secret: &TTK_MONGO_SECRET
-#     name: &TTK_MONGO_SECRET_NAME ttk-mongodb
-#     key: &TTK_MONGO_SECRET_KEY mongodb-passwords
-#   ttk_mongo_database: &TTK_MONGO_DATABASE "ttk"
+  ## TTK MONGODB BACKEND
+  ttk_mongo_host: &TTK_MONGO_HOST "ttk-mongodb"
+  ttk_mongo_port: &TTK_MONGO_PORT "27017"
+  ttk_mongo_user: &TTK_MONGO_USER "ttk"
+  ttk_mongo_password: &TTK_MONGO_PASSWORD ""
+  ttk_mongo_secret: &TTK_MONGO_SECRET
+    name: &TTK_MONGO_SECRET_NAME ttk-mongodb
+    key: &TTK_MONGO_SECRET_KEY mongodb-passwords
+  ttk_mongo_database: &TTK_MONGO_DATABASE "ttk"
 
-#   ## MOJALOOP-TTK-SIMULATORS BACKEND
-#   moja_ttk_sim_kafka_host: &MOJA_TTK_SIM_KAFKA_HOST kafka
-#   moja_ttk_sim_kafka_port: &MOJA_TTK_SIM_KAFKA_PORT 9092
-#   # The Redis Instance can be installed using the following command: helm -n <NAMESPACE> install backend ./example-mojaloop-backend --set "kafka.enabled=false" --set "centralledger-mysql.enabled=false" --set "account-lookup-mysql.enabled=false" --set "centralledger-obj.enabled=false" --set "cep-mongodb.enabled=false" --set "kafka-console.enabled=false" --set "ttksims-redis.enabled=true"
-#   moja_ttk_sim_redis_host: &MOJA_TTK_SIM_REDIS_HOST ttksims-redis-master
-#   moja_ttk_sim_redis_port: &MOJA_TTK_SIM_REDIS_PORT 6379
+  ## MOJALOOP-TTK-SIMULATORS BACKEND
+  moja_ttk_sim_kafka_host: &MOJA_TTK_SIM_KAFKA_HOST kafka
+  moja_ttk_sim_kafka_port: &MOJA_TTK_SIM_KAFKA_PORT 9092
+  # The Redis Instance can be installed using the following command: helm -n <NAMESPACE> install backend ./example-mojaloop-backend --set "kafka.enabled=false" --set "centralledger-mysql.enabled=false" --set "account-lookup-mysql.enabled=false" --set "centralledger-obj.enabled=false" --set "cep-mongodb.enabled=false" --set "kafka-console.enabled=false" --set "ttksims-redis.enabled=true"
+  moja_ttk_sim_redis_host: &MOJA_TTK_SIM_REDIS_HOST ttksims-redis-master
+  moja_ttk_sim_redis_port: &MOJA_TTK_SIM_REDIS_PORT 6379
 
-#   ## THIRDPARTY AUTH-SVC BACKEND
-#   tp_auth_svc_db_name: &TP_AUTH_SVC_DB_NAME "auth_svc"
-#   tp_auth_svc_db_password: &TP_AUTH_SVC_DB_PASSWORD ""
-#   tp_auth_svc_db_secret: &TP_AUTH_SVC_DB_SECRET
-#     name: &TP_AUTH_SVC_DB_SECRET_NAME mysqldb
-#     key: &TP_AUTH_SVC_DB_SECRET_KEY mysql-password
-#   tp_auth_svc_db_host: &TP_AUTH_SVC_DB_HOST 'mysqldb'
-#   tp_auth_svc_db_port: &TP_AUTH_SVC_DB_PORT 3306
-#   tp_auth_svc_db_user: &TP_AUTH_SVC_DB_USER "auth_svc"
-#   tp_auth_svc_redis_host: &TP_AUTH_SVC_REDIS_HOST auth-svc-redis-master
-#   tp_auth_svc_redis_port: &TP_AUTH_SVC_REDIS_PORT 6379
+  ## THIRDPARTY AUTH-SVC BACKEND
+  tp_auth_svc_db_name: &TP_AUTH_SVC_DB_NAME "auth_svc"
+  tp_auth_svc_db_password: &TP_AUTH_SVC_DB_PASSWORD ""
+  tp_auth_svc_db_secret: &TP_AUTH_SVC_DB_SECRET
+    name: &TP_AUTH_SVC_DB_SECRET_NAME mysqldb
+    key: &TP_AUTH_SVC_DB_SECRET_KEY mysql-password
+  tp_auth_svc_db_host: &TP_AUTH_SVC_DB_HOST 'mysqldb'
+  tp_auth_svc_db_port: &TP_AUTH_SVC_DB_PORT 3306
+  tp_auth_svc_db_user: &TP_AUTH_SVC_DB_USER "auth_svc"
+  tp_auth_svc_redis_host: &TP_AUTH_SVC_REDIS_HOST auth-svc-redis-master
+  tp_auth_svc_redis_port: &TP_AUTH_SVC_REDIS_PORT 6379
 
-#   ## THIRDPARTY ALS_CONSENT-SVC BACKEND
-#   tp_als_consent_svc_db_name: &TP_ALS_CONSENT_SVC_DB_NAME "consent_oracle"
-#   tp_als_consent_svc_db_password: &TP_ALS_CONSENT_SVC_DB_PASSWORD ""
-#   tp_als_consent_svc_db_secret: &TP_ALS_CONSENT_SVC_DB_SECRET
-#     name: &TP_ALS_CONSENT_SVC_DB_SECRET_NAME mysqldb
-#     key: &TP_ALS_CONSENT_SVC_DB_SECRET_KEY mysql-password
-#   tp_als_consent_svc_db_host: &TP_ALS_CONSENT_SVC_DB_HOST 'mysqldb'
-#   tp_als_consent_svc_db_port: &TP_ALS_CONSENT_SVC_DB_PORT 3306
-#   tp_als_consent_svc_db_user: &TP_ALS_CONSENT_SVC_DB_USER "consent_oracle"
+  ## THIRDPARTY ALS_CONSENT-SVC BACKEND
+  tp_als_consent_svc_db_name: &TP_ALS_CONSENT_SVC_DB_NAME "consent_oracle"
+  tp_als_consent_svc_db_password: &TP_ALS_CONSENT_SVC_DB_PASSWORD ""
+  tp_als_consent_svc_db_secret: &TP_ALS_CONSENT_SVC_DB_SECRET
+    name: &TP_ALS_CONSENT_SVC_DB_SECRET_NAME mysqldb
+    key: &TP_ALS_CONSENT_SVC_DB_SECRET_KEY mysql-password
+  tp_als_consent_svc_db_host: &TP_ALS_CONSENT_SVC_DB_HOST 'mysqldb'
+  tp_als_consent_svc_db_port: &TP_ALS_CONSENT_SVC_DB_PORT 3306
+  tp_als_consent_svc_db_user: &TP_ALS_CONSENT_SVC_DB_USER "consent_oracle"
 
 # # Default values for central.
 # # This is a YAML-formatted file.
@@ -12770,8 +12770,6 @@
 #       #  cpu: 100m
 #       #  memory: 128Mi
 #       resources: {}
-argocd:
-  enabled: true
 
 ml-testing-toolkit:
   enabled: true

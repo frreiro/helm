@@ -20,8 +20,8 @@ backoffLimit: 0
 restartPolicy: Never
 
 job:
-  enabled: true
-  ttlSecondsAfterFinished: 100
+  enabled: false
+  ttlSecondsAfterFinished: 50
   generateNameEnabled: true
 
 ## Bash script for TTK CLI

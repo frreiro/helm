@@ -13145,11 +13145,17 @@ ml-testing-toolkit:
       API_BASE_URL: http://testing-toolkit.local
 
 ml-ttk-posthook-setup:
+  job:
+    enabled: true
+    ttlSecondsAfterFinished: 100
+    generateNameEnabled: true
+
   postInstallHook:
     enabled: false
     weight: -5
     argocd: 
       enabled: false
+
   config:
     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
     testCasesZipUrl: &ttkGitUrl https://github.com/mojaloop/testing-toolkit-test-cases/archive/v15.1.0.zip
@@ -13160,6 +13166,11 @@ ml-ttk-posthook-setup:
   testCaseEnvironmentFile: *ttkInputValues
 
 ml-ttk-posthook-tests:
+  job:
+    enabled: true
+    ttlSecondsAfterFinished: 100
+    generateNameEnabled: true
+
   postInstallHook:
     enabled: false
     weight: -4

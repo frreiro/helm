@@ -1,18 +1,4 @@
-apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.Job" . }}
-kind: Job
-metadata:
-  generateName: {{ template "ml-testing-toolkit-cli.fullname" . }}
-  annotations:
-    argocd.argoproj.io/hook: PostSync
-    argocd.argoproj.io/sync-wave: "0"
-spec:
-  backoffLimit: {{ .Values.backoffLimit }}
-  restartPolicy: {{ .Values.restartPolicy }}
-  {{- include "ml-testing-toolkit-cli.jobtemplate" . | indent 2 }}
-  backoffLimit: 2
 {{- if .Values.scheduling.enabled }}
-
-
 apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.CronJob" . }}
 kind: CronJob
 metadata:
@@ -29,6 +15,7 @@ spec:
       restartPolicy: {{ .Values.restartPolicy }}
       {{- include "ml-testing-toolkit-cli.jobtemplate" . | nindent 6 }}
 {{- end }}
+
 {{- if .Values.job.enabled }} ## added job definition to values.yaml
 apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.Job" . }}
 kind: Job

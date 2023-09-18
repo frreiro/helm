@@ -19,6 +19,11 @@ image:
 backoffLimit: 0
 restartPolicy: Never
 
+job:
+  enabled: false
+  ttlSecondsAfterFinished: 100
+  generateNameEnabled: true
+
 ## Bash script for TTK CLI
 script: |
     echo "Downloading the test collection...";

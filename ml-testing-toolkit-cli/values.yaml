@@ -20,7 +20,7 @@ backoffLimit: 0
 restartPolicy: Never
 
 job:
-  enabled: false
+  enabled: true
   ttlSecondsAfterFinished: 100
   generateNameEnabled: true
 

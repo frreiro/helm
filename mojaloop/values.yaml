@@ -13161,6 +13161,9 @@ ml-ttk-posthook-setup:
     testCasesZipUrl: &ttkGitUrl https://github.com/mojaloop/testing-toolkit-test-cases/archive/v15.1.0.zip
     testCasesPathInZip: &ttkGitPathSetup testing-toolkit-test-cases-15.1.0/collections/hub/provisioning
     ttkBackendURL: http://$release_name-ml-testing-toolkit-backend:5050
+    saveReport: true
+    saveReportBaseUrl: "testing-toolkit.local"
+    reportName: posthook_setup
   parameters:
     <<: *simNames
   testCaseEnvironmentFile: *ttkInputValues
@@ -13221,7 +13224,7 @@ ml-ttk-posthook-cleanup:
 
   postInstallHook:
     enabled: false
-    weight: -4
+    weight: -3
     argocd: 
       enabled: false
 

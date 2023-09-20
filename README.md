@@ -200,7 +200,9 @@ This script will ensure that all dependencies and child-dependencies are updated
 
 e.g. `helm --namespace mojaloop upgrade dev ./centralenduserregistry`
 
-## Deployment using ARGOCD
+## Testing Deployments
+
+### Deployment using ARGOCD
 
 Mojaloop has specific hooks to run tests in ArgoCD. To use those hooks and run tests automatically, enable the following options in `values.yaml`
 
@@ -210,8 +212,6 @@ Mojaloop has specific hooks to run tests in ArgoCD. To use those hooks and run t
 `ml-ttk-posthook-tests.postInstallHook.argocd.enable=true`
 `ml-ttk-posthook-cleanup.postInstallHook.enable=true`   
 `ml-ttk-posthook-cleanup.postInstallHook.argocd.enable=true`
-
-## Testing Deployments
 
 ### Validation
 

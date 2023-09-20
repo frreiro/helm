@@ -12841,7 +12841,6 @@ ml-testing-toolkit:
 
     ingress:
       enabled: true
-      className: "nginx"
       hosts:
         specApi:
           host: testing-toolkit-specapi.local
@@ -13137,7 +13136,6 @@ ml-testing-toolkit:
   ml-testing-toolkit-frontend:
     ingress:
       enabled: true
-      className: "nginx"
       hosts:
         ui:
           host: testing-toolkit.local
@@ -13145,41 +13143,22 @@ ml-testing-toolkit:
       API_BASE_URL: http://testing-toolkit.local
 
 ml-ttk-posthook-setup:
-  job:
-    enabled: true
-    ttlSecondsAfterFinished: 100
-    generateNameEnabled: true
-
   postInstallHook:
     enabled: false
     weight: -5
-    argocd: 
-      enabled: false
-
   config:
     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
     testCasesZipUrl: &ttkGitUrl https://github.com/mojaloop/testing-toolkit-test-cases/archive/v15.1.0.zip
     testCasesPathInZip: &ttkGitPathSetup testing-toolkit-test-cases-15.1.0/collections/hub/provisioning
     ttkBackendURL: http://$release_name-ml-testing-toolkit-backend:5050
-    saveReport: true
-    saveReportBaseUrl: "testing-toolkit.local"
-    reportName: posthook_setup
   parameters:
     <<: *simNames
   testCaseEnvironmentFile: *ttkInputValues
 
 ml-ttk-posthook-tests:
-  job:
-    enabled: true
-    ttlSecondsAfterFinished: 100
-    generateNameEnabled: true
-
   postInstallHook:
     enabled: false
     weight: -4
-    argocd: 
-      enabled: false
-      
   config:
     ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
     testCasesZipUrl: *ttkGitUrl
@@ -13187,60 +13166,8 @@ ml-ttk-posthook-tests:
     # awsS3BucketName: aws-s3-bucket-name
     # awsS3FilePath: ttk-tests/reports
     ttkBackendURL: http://$release_name-ml-testing-toolkit-backend:5050
-    testSuiteName: PostHook Tests
+    testSuiteName: GP Tests
     environmentName: Development
-    saveReport: true
-    saveReportBaseUrl: "testing-toolkit.local"
-    reportName: posthook_collection
-
-  # configCreds:
-  #   AWS_ACCESS_KEY_ID: 'some_aws_access_key'
-  #   AWS_SECRET_ACCESS_KEY: 'some_aws_secret_key'
-  #   AWS_REGION: 'us-west-2'
-  #   SLACK_WEBHOOK_URL: 'slack_inbound_webhook'
-
-  ## Optionally specify the config file defaults for TTK CLI
-  ## You should specify at least mode here
-  # configFileDefaults: {
-  #   "mode": "outbound",
-  #   "reportFormat": "html",
-  #   "baseURL": "",
-  #   "reportTarget": "",
-  #   "reportAutoFilenameEnable": true,
-  #   "slackWebhookUrl": "",
-  #   "slackPassedImage": "",
-  #   "slackFailedImage": ""
-  # }
-  configFileDefaults: {"mode": "outbound"}
-  parameters:
-    <<: *simNames
-  testCaseEnvironmentFile: *ttkInputValues
-
-ml-ttk-posthook-cleanup:
-  job:
-    enabled: true
-    ttlSecondsAfterFinished: 100
-    generateNameEnabled: true
-
-  postInstallHook:
-    enabled: false
-    weight: -3
-    argocd: 
-      enabled: false
-
-  config:
-    ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases
-    testCasesZipUrl: *ttkGitUrl
-    testCasesPathInZip: &ttkGitPathCleanup testing-toolkit-test-cases-15.1.0/collections/hub/cleanup
-    # testCasesPathInZip: *ttkGitPathGP
-    # awsS3BucketName: aws-s3-bucket-name
-    # awsS3FilePath: ttk-tests/reports
-    ttkBackendURL: http://$release_name-ml-testing-toolkit-backend:5050
-    testSuiteName: PostHook Cleanup
-    environmentName: Development
-    saveReport: true
-    saveReportBaseUrl: "testing-toolkit.local"
-    reportName: posthook_cleanup
 
   # configCreds:
   #   AWS_ACCESS_KEY_ID: 'some_aws_access_key'

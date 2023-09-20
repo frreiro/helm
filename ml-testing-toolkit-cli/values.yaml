@@ -19,10 +19,24 @@ image:
 backoffLimit: 0
 restartPolicy: Never
 
+postInstallHook:
+  enabled: false
+  weight: -5
+  deletePolicy: before-hook-creation
+
+
 job:
   enabled: false
   ttlSecondsAfterFinished: 50
   generateNameEnabled: true
+
+  # Add custom annotations here. Use the following line as examples
+  # annotations: 
+  #   argocd.argoproj.io/hook: PostSync
+  #   argocd.argoproj.io/sync-wave: "-5"
+  
+   
+
 
 ## Bash script for TTK CLI
 script: |
@@ -93,12 +107,6 @@ tests:
   weight: -5
   deletePolicy: before-hook-creation
 
-postInstallHook:
-  enabled: false
-  weight: -5
-  deletePolicy: before-hook-creation
-  argocd: 
-    enabled: false
 
 config:
   ## Test-case archive zip for test-cases: https://github.com/mojaloop/testing-toolkit-test-cases

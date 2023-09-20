@@ -15,7 +15,6 @@ spec:
       restartPolicy: {{ .Values.restartPolicy }}
       {{- include "ml-testing-toolkit-cli.jobtemplate" . | nindent 6 }}
 {{- end }}
-
 {{- if .Values.job.enabled }} ## added job definition to values.yaml
 apiVersion: {{ template "ml-testing-toolkit-cli.apiVersion.Job" . }}
 kind: Job
@@ -25,18 +24,18 @@ metadata:
   {{- else }}
   name: {{ template "ml-testing-toolkit-cli.fullname" . }}
   {{- end }}
-  annotations:
-    {{- if .Values.postInstallHook.argocd.enabled }}
-    "argocd.argoproj.io/hook": PostSync
-    "argocd.argoproj.io/sync-wave": {{ .Values.postInstallHook.weight | quote }}  #Using same weight of helm hook, running in same order
-    {{- else if .Values.postInstallHook.enabled }}
+
+  annotations: 
+  {{- if .Values.postInstallHook.enabled }}
     "helm.sh/hook": post-install
     "helm.sh/hook-weight": {{ .Values.postInstallHook.weight | quote }}
     "helm.sh/hook-delete-policy": {{ .Values.postInstallHook.deletePolicy }}
-    {{- end }}
-    ## Add custom annotations, and updated the values.yaml
-    ## Example ArgoCD annotations that would be injected via the custom annotations (ref: https://argo-cd.readthedocs.io/en/stable/user-guide/resource_hooks/#hook-deletion-policies):
-    # argocd.argoproj.io/hook: PostSync
+  {{- end }}
+    ## Adding custom annotations, if update the values.yaml in 'job.annotations'
+  {{- with .Values.job.annotations }}
+    {{ toYaml .| indent 4 | trim }}
+  {{- end }}
+
 spec:
   {{- if .Values.job.ttlSecondsAfterFinished }}
   ttlSecondsAfterFinished: {{ .Values.job.ttlSecondsAfterFinished }} ## this would need to be added

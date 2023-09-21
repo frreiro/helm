@@ -202,6 +202,26 @@ e.g. `helm --namespace mojaloop upgrade dev ./centralenduserregistry`
 
 ## Testing Deployments
 
+### Deployment using custom ARGOCD annotations
+
+You can input customize hooks for argocd.To run tests automatically with argocd, enable the following options and add the argocd annotations in `values.yaml`
+
+- Test Setup
+   - `ml-ttk-posthook-setup.postInstallHook.enable=true`   
+   - `ml-ttk-posthook-setup.postInstallHook.job.enable=true`
+   - `ml-ttk-posthook-setup.postInstallHook.job.annotations."argocd\.argoproj\.io/hook"=PostSync`
+   - `ml-ttk-posthook-setup.postInstallHook.job.annotations."argocd\.argoproj\.io/sync-wave"="-5"`
+- Tests
+   - `ml-ttk-posthook-tests.postInstallHook.enable=true`   
+   - `ml-ttk-posthook-tests.postInstallHook.job.enable=true`
+   - `ml-ttk-posthook-tests.postInstallHook.job.annotations."argocd\.argoproj\.io/hook"=PostSync`
+   - `ml-ttk-posthook-tests.postInstallHook.job.annotations."argocd\.argoproj\.io/sync-wave"="-4"`
+- Test Cleanup
+   - `ml-ttk-test-cleanup.postInstallHook.enable=true`   
+   - `ml-ttk-test-cleanup.postInstallHook.job.enable=true`
+   - `ml-ttk-test-cleanup.postInstallHook.job.annotations."argocd\.argoproj\.io/hook"=PostSync`
+   - `ml-ttk-test-cleanup.postInstallHook.job.annotations."argocd\.argoproj\.io/sync-wave"="-1"`
+
 ### Validation
 
 _Note: This is currently only supported by Helm v3._

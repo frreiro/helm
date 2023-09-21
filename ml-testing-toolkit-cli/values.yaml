@@ -34,10 +34,7 @@ job:
   # Add custom annotations here. Use the following line as examples, it will overrride the default helm hook.
   #   argocd.argoproj.io/hook: PostSync
   #   argocd.argoproj.io/sync-wave: "-5"
-
-  #### If passing the arguments using commad line, may be necessary scape the "." character. Use "\." -> i.e: "argocd\.argoproj\.io/hook": PostSync
-  
-   
+  #### If passing the arguments using commad line, may be necessary scape the "." character -> i.e: "argocd\.argoproj\.io/hook": PostSync
 
 
 ## Bash script for TTK CLI

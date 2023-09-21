@@ -24,9 +24,9 @@ metadata:
   {{- else }}
   name: {{ template "ml-testing-toolkit-cli.fullname" . }}
   {{- end }}
-
   annotations: 
-  {{- if .Values.postInstallHook.enabled }}
+   ## If the postInstallHook is enabled without custom annotations use the helm default hook 
+  {{- if ( and .Values.postInstallHook.enabled (not .Values.job.annotations)) }}
     "helm.sh/hook": post-install
     "helm.sh/hook-weight": {{ .Values.postInstallHook.weight | quote }}
     "helm.sh/hook-delete-policy": {{ .Values.postInstallHook.deletePolicy }}

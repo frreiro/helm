@@ -31,7 +31,7 @@ job:
   generateNameEnabled: true
 
   annotations: {}
-  # Add custom annotations here. Use the following line as examples
+  # Add custom annotations here. Use the following line as examples, it will overrride the default helm hook.
   #   argocd.argoproj.io/hook: PostSync
   #   argocd.argoproj.io/sync-wave: "-5"
 
